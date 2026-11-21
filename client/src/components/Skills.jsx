@@ -1,5 +1,23 @@
-const groups = [['Build', 'React.js, Redux Toolkit, Context API, Tailwind CSS, responsive UI'], ['Connect', 'Node.js, Express.js, REST APIs, JWT, OTP and role-based access'], ['Store', 'MongoDB, MongoDB Atlas, Mongoose, MySQL and data modelling'], ['Ship', 'AWS EC2, S3, VPC, IAM, Nginx, PM2, CloudWatch and GitHub Actions']];
+const groups = [
+  ['Frontend', 'JavaScript, React, Redux Toolkit, Context API, HTML, CSS, Tailwind CSS'],
+  ['Backend & data', 'Node.js, Express, REST APIs, JWT, MongoDB, Mongoose, MySQL'],
+  ['Tools & deployment', 'Git, GitHub Actions, Postman, Linux, AWS EC2, S3, Nginx'],
+];
 
 export default function Skills() {
-  return <section id="skills" className="px-5 py-24 sm:px-8 lg:px-12 lg:py-28"><div className="mx-auto max-w-6xl"><div className="reveal flex flex-col justify-between gap-5 border-b border-[#18202b]/15 pb-7 sm:flex-row sm:items-end dark:border-white/15"><div><p className="eyebrow">02 / Toolkit</p><h2 className="section-title mt-5">The stack behind the work.</h2></div><p className="max-w-xs text-sm leading-6 text-[#59616b] dark:text-[#b7bbc2]">Tools I use to move from an interface idea to a deployed, testable product.</p></div><div className="mt-8 grid gap-px overflow-hidden rounded-2xl border border-[#18202b]/10 bg-[#18202b]/10 sm:grid-cols-2 dark:border-white/10 dark:bg-white/10">{groups.map(([title, text], index) => <article key={title} className="reveal bg-[#f7f7f3] p-7 dark:bg-[#101318]"><span className="text-sm font-bold text-violet-600 dark:text-violet-300">0{index + 1}</span><h3 className="mt-8 text-2xl font-bold tracking-tight">{title}</h3><p className="mt-3 max-w-sm text-base leading-7 text-[#59616b] dark:text-[#b7bbc2]">{text}</p></article>)}</div></div></section>;
+  return (
+    <section id="skills" className="px-5 py-12 sm:px-8 ">
+      <div className="page-container">
+        <h2 className="section-title">Skills</h2>
+        <dl className="mt-6 divide-y divide-[#18202b]/10 dark:divide-white/10">
+          {groups.map(([title, description]) => (
+            <div key={title} className="grid gap-2 py-4 sm:grid-cols-[190px_1fr]">
+              <dt className="font-semibold">{title}</dt>
+              <dd className="leading-7 text-[var(--muted)]">{description}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+    </section>
+  );
 }

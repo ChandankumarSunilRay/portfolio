@@ -1,3 +1,13 @@
 export default function Contact() {
-  return <section id="contact" className="px-5 pb-20 sm:px-8 lg:px-12 lg:pb-24"><div className="reveal mx-auto flex max-w-6xl flex-col gap-8 rounded-2xl bg-[#18202b] p-7 text-[#f7f7f3] sm:p-10 lg:flex-row lg:items-center lg:justify-between"><div><p className="eyebrow text-violet-300">04 / Contact</p><h2 className="mt-4 max-w-xl text-4xl font-bold leading-tight tracking-tight">Want to talk about a role or project?</h2></div><div className="max-w-sm"><p className="leading-7 text-white/65">I’m open to junior MERN, React and full-stack opportunities.</p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=chandankumarsunilray@gmail.com&su=Portfolio%20enquiry" target="_blank" rel="noreferrer" className="mt-5 inline-block rounded-lg bg-[#f7f7f3] px-5 py-3 text-sm font-bold text-[#18202b]">Open Gmail</a><p className="mt-3 text-sm text-white/60">Or email: chandankumarsunilray@gmail.com</p></div></div></section>;
+  return (
+    <section id="contact" className="px-5 py-12 sm:px-8">
+      <div className="page-container grid gap-6 border-t border-[var(--line)] pt-10 sm:grid-cols-2 sm:items-center">
+        <div><h2 className="section-title">Get in touch</h2><p className="mt-3 text-sm leading-7 text-[var(--muted)]">Have a role or project in mind? Send me an email.</p></div>
+        <div className="sm:justify-self-end">
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=chandankumarsunilray@gmail.com&su=Portfolio%20enquiry" target="_blank" rel="noreferrer" className="button button-primary">Open Gmail</a>
+          <p className="mt-3 break-all text-sm text-[var(--muted)]">chandankumarsunilray@gmail.com</p>
+        </div>
+      </div>
+    </section>
+  );
 }

@@ -1,5 +1,22 @@
-const items = [['2026', 'Education', 'B.Sc. Computer Science', 'L.D. Sonawane College, University of Mumbai · CGPA 8.3/10'], ['2026', 'Certification', 'AWS Certified Cloud Practitioner', 'Alongside GitHub Copilot and Cisco Networking Academy training.'], ['Now', 'Next step', 'Ready to contribute', 'Looking for a MERN or full-stack role where I can learn quickly and ship carefully.']];
-
 export default function Journey() {
-  return <section className="px-5 py-24 sm:px-8 lg:px-12 lg:py-28"><div className="mx-auto max-w-6xl"><div className="reveal"><p className="eyebrow">04 / Where I’m headed</p><h2 className="section-title mt-5">Early career, serious about the craft.</h2></div><div className="mt-12 grid gap-5 md:grid-cols-3">{items.map(([year, type, title, text]) => <article key={title} className="reveal border-t-2 border-[#18202b] pt-5 dark:border-[#f3f1ea]"><div className="flex justify-between text-sm font-bold"><span>{year}</span><span className="text-violet-600 dark:text-violet-300">{type}</span></div><h3 className="mt-12 text-2xl font-bold tracking-tight">{title}</h3><p className="mt-3 leading-7 text-[#59616b] dark:text-[#b7bbc2]">{text}</p></article>)}</div></div></section>;
+  return (
+    <section className="px-5 py-12 sm:px-8 ">
+      <div className="mx-auto grid max-w-[1080px] gap-10 border-t border-[var(--line)] pt-10  md:grid-cols-2">
+        <div>
+          <h2 className="section-title">Education</h2>
+          <h3 className="mt-5 font-semibold">B.Sc. Computer Science</h3>
+          <p className="mt-2 leading-7 text-[var(--muted)]">L.D. Sonawane College, University of Mumbai</p>
+          <p className="mt-2 text-sm">2026 · CGPA 8.3/10</p>
+        </div>
+        <div>
+          <h2 className="section-title">Certifications & training</h2>
+          <ul className="mt-5 list-inside list-disc space-y-3 text-[var(--muted)]">
+            <li>AWS Certified Cloud Practitioner</li>
+            <li>GitHub Copilot certification</li>
+            <li>Cisco Networking Academy training</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  );
 }

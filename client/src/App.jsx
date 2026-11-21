@@ -9,7 +9,7 @@ import Contact from './components/Contact.jsx';
 import Footer from './components/Footer.jsx';
 
 export default function App() {
-  const [darkMode, setDarkMode] = useState(() => localStorage.getItem('portfolio-theme') !== 'light');
+  const [darkMode, setDarkMode] = useState(() => localStorage.getItem('portfolio-theme') === 'dark');
 
   useEffect(() => {
     document.documentElement.classList.toggle('dark', darkMode);
@@ -17,9 +17,9 @@ export default function App() {
   }, [darkMode]);
 
   return (
-    <div className="min-h-screen overflow-hidden bg-[#f7f7f3] text-[#18202b] transition-colors duration-300 dark:bg-[#101318] dark:text-[#f3f1ea]">
+    <div className="min-h-screen bg-[var(--page)] text-[var(--ink)]">
       <Header darkMode={darkMode} onToggleTheme={() => setDarkMode((value) => !value)} />
-      <main><Hero /><About /><Skills /><Projects /><Journey /><Contact /></main>
+      <main id="main"><Hero /><Projects /><About /><Skills /><Journey /><Contact /></main>
       <Footer />
     </div>
   );

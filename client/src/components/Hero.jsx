@@ -1,5 +1,17 @@
-const capabilities = ['React interfaces', 'Node.js APIs', 'MongoDB', 'AWS deployment'];
-
 export default function Hero() {
-  return <section id="top" className="px-5 pb-20 pt-20 sm:px-8 lg:px-12 lg:pt-24"><div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:items-end"><div><h1 className="max-w-4xl text-5xl font-bold leading-tight tracking-tight sm:text-6xl">Hi, I’m Chandankumar.</h1><p className="mt-6 max-w-2xl text-lg leading-8 text-[#59616b] dark:text-[#b7bbc2]">I’m a recent computer science graduate who enjoys building useful websites and learning how the backend works.</p><div className="mt-8 flex flex-wrap gap-3"><a href="#work" className="rounded-lg bg-[#18202b] px-5 py-3 text-sm font-bold text-[#f7f7f3] dark:bg-[#f3f1ea] dark:text-[#101318]">View my work</a><a href="https://mail.google.com/mail/?view=cm&fs=1&to=chandankumarsunilray@gmail.com&su=Portfolio%20enquiry" target="_blank" rel="noreferrer" className="rounded-lg border border-[#18202b]/20 px-5 py-3 text-sm font-bold dark:border-white/20">Email me</a><a href="/resumepage.html" target="_blank" rel="noopener" className="rounded-lg border border-[#18202b]/20 px-5 py-3 text-sm font-bold dark:border-white/20">View resume</a></div></div><div className="border-t border-[#18202b]/20 pt-5 dark:border-white/20"><div className="flex items-center gap-4"><img src="/chandankumar-ray-profile.png" alt="Chandankumar Ray" className="h-12 w-12 rounded-full object-cover grayscale" /><p className="text-sm font-bold uppercase tracking-[0.16em] text-[#59616b] dark:text-[#b7bbc2]">A little about me</p></div><p className="mt-6 text-xl font-semibold leading-snug">I work with React, Node.js, MongoDB, Tailwind CSS and AWS.</p><div className="mt-6 grid grid-cols-2 gap-3 text-sm text-[#59616b] dark:text-[#b7bbc2]">{capabilities.map((item) => <span key={item}>• {item}</span>)}</div></div></div></section>;
+  return (
+    <section id="top" className="px-5 py-12 sm:px-8  lg:py-16">
+      <div className="page-container">
+        <p className="eyebrow">MERN Stack Developer</p>
+        <h1 className="mt-4 text-4xl font-bold tracking-tight sm:text-[2.75rem]">Hi, I'm Chandankumar Ray.</h1>
+        <p className="mt-5 max-w-2xl text-lg leading-8 text-[var(--muted)]">I'm a computer science graduate. I build web applications with React, Node.js and MongoDB, and deploy them on AWS.</p>
+        <div className="mt-7 flex flex-wrap items-center gap-4 text-sm font-semibold">
+          <a href="#work" className="button button-primary">View projects</a>
+          <a href="/resumepage.html" target="_blank" rel="noopener" className="button">View resume</a>
+          <a href="https://github.com/ChandankumarSunilRay" target="_blank" rel="noreferrer" className="text-link">GitHub</a>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=chandankumarsunilray@gmail.com" target="_blank" rel="noreferrer" className="text-link">Email me</a>
+        </div>
+      </div>
+    </section>
+  );
 }
