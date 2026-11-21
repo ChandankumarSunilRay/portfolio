@@ -1,0 +1,12 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root { font-family: "Manrope", sans-serif; color-scheme: light; scroll-behavior: smooth; font-synthesis: none; }
+:root.dark { color-scheme: dark; }
+body { margin: 0; min-width: 320px; }
+h1, h2, h3, .font-display { font-family: "Space Grotesk", sans-serif; }
+::selection { background: #c4b5fd; color: #18202b; }
+.reveal { opacity: 1; }
+.eyebrow { font-size: 0.75rem; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: #6d28d9; }
+.dark .eyebrow { color: #c4b5fd; }
+.section-title { max-width: 38rem; font-family: "Space Grotesk", sans-serif; font-size: clamp(2.25rem, 5vw, 4.5rem); font-weight: 700; line-height: 0.98; letter-spacing: -0.055em; }

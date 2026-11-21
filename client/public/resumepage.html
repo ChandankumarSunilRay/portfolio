@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chandankumar Ray | Resume</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #e9ebef; color: #111; font-family: Calibri, Arial, sans-serif; }
+    .toolbar { max-width: 816px; margin: 20px auto; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; padding: 0 16px; font: 14px system-ui, sans-serif; }
+    .toolbar a, .toolbar button { border: 1px solid #c5cad3; border-radius: 6px; padding: 10px 16px; background: white; color: #18202b; text-decoration: none; font: inherit; cursor: pointer; }
+    .toolbar button { background: #18202b; color: white; }
+    :focus-visible { outline: 3px solid #7959d7; outline-offset: 3px; }
+    .resume { max-width: 816px; min-height: 1056px; margin: 0 auto 28px; padding: 54px 62px; background: white; box-shadow: 0 2px 16px #0001; font-size: 14px; line-height: 1.35; }
+    h1 { margin: 0 0 4px; text-align: center; font: 30px Georgia, 'Times New Roman', serif; color: #94009f; text-decoration: underline; text-underline-offset: 3px; }
+    .contact { text-align: center; font: 14px/1.5 'Times New Roman', serif; overflow-wrap: anywhere; }
+    .contact a { color: inherit; text-decoration: none; }
+    h2 { margin: 0 0 7px; font: bold 17px Georgia, 'Times New Roman', serif; }
+    h3 { margin: 0; font: bold 15px/1.4 Georgia, 'Times New Roman', serif; }
+    p { margin: 0 0 6px; }
+    section { margin-top: 30px; }
+    .summary { margin-top: 12px; }
+    .skills { display: grid; grid-template-columns: 75px 1fr; gap: 5px 8px; margin: 0; }
+    dt { font-weight: bold; font-family: Georgia, 'Times New Roman', serif; }
+    dd { margin: 0; }
+    .project-heading { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; align-items: baseline; }
+    .project-heading a { color: #94009f; }
+    ul { padding-left: 22px; margin: 8px 0 0; }
+    li { padding-left: 2px; margin: 3px 0; }
+    .lab { margin-top: 32px; }
+    .education p { margin-top: 5px; }
+    @media (max-width: 600px) {
+      .resume { margin: 0; padding: 30px 20px; min-height: auto; }
+      h1 { font-size: 26px; }
+      .contact a { display: block; }
+      .contact .separator { display: none; }
+      .skills { grid-template-columns: 1fr; gap: 2px; }
+      dd { margin-bottom: 8px; }
+    }
+    @page { size: letter; margin: .55in .65in; }
+    @media print {
+      body { background: white; }
+      .toolbar { display: none; }
+      .resume { max-width: none; min-height: 0; padding: 0; margin: 0; box-shadow: none; font-size: 10.5pt; }
+      h1 { font-size: 22pt; }
+      .contact { font-size: 10pt; }
+      .contact a { display: inline; }
+      .contact .separator { display: inline; }
+      section { margin-top: 20pt; }
+      .summary { margin-top: 10pt; }
+      h2 { font-size: 12pt; break-after: avoid; }
+      h3 { font-size: 11pt; break-after: avoid; }
+      li { break-inside: avoid; }
+      .skills { grid-template-columns: 60pt 1fr; gap: 3pt 6pt; }
+      dd { margin: 0; }
+      .lab { margin-top: 20pt; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="toolbar" aria-label="Resume actions">
+    <a href="/">Back to portfolio</a>
+    <a href="/Chandankumar-Ray-Resume.pdf" download>Download PDF</a>
+    <button type="button" id="print">Print resume</button>
+  </nav>
+  <main class="resume">
+    <header>
+      <h1>Chandankumar Ray</h1>
+      <div class="contact">
+        <a href="mailto:chandankumarsunilray@gmail.com">chandankumarsunilray@gmail.com</a>
+        <a href="https://www.linkedin.com/in/chandankumarraydev/" target="_blank" rel="noopener">linkedin.com/in/chandankumarraydev</a>
+        <span class="separator"> | </span>
+        <a href="https://github.com/ChandankumarSunilRay" target="_blank" rel="noopener">github.com/ChandankumarSunilRay</a>
+      </div>
+    </header>
+    <section class="summary">
+      <h2>Summary</h2>
+      <p>Computer Science graduate with hands-on experience building and deploying a MERN learning management system. Implemented course payments, protected video access and learner progress tracking using React, Express, MongoDB and AWS.</p>
+    </section>
+    <section>
+      <h2>Technical Skills</h2>
+      <dl class="skills">
+        <dt>Frontend:</dt><dd>JavaScript (ES6+), React.js, Redux Toolkit, Context API, HTML5, CSS3, Tailwind CSS</dd>
+        <dt>Backend:</dt><dd>Node.js, Express.js, REST APIs, JWT authentication, role-based access control</dd>
+        <dt>Databases:</dt><dd>MongoDB, MongoDB Atlas, Mongoose, SQL, MySQL</dd>
+        <dt>Tools:</dt><dd>Git, GitHub, Postman, Render, Netlify, VS Code</dd>
+        <dt>Cloud:</dt><dd>AWS EC2, S3, IAM, VPC, Route 53, RDS, CloudWatch; Linux, Nginx, PM2</dd>
+      </dl>
+    </section>
+    <section>
+      <h2>Projects</h2>
+      <div class="project-heading">
+        <h3>The Virtual Campus | Learning Management System</h3>
+        <span>Live website: <a href="https://www.thevirtualcampus.me" target="_blank" rel="noopener">The Virtual Campus</a></span>
+      </div>
+      <ul>
+        <li>Built responsive React course cards and dashboards, using Context API to share account and course data across pages.</li>
+        <li>Developed Express REST APIs for courses, lectures and learner progress in MongoDB Atlas. Protected administrative actions with JWT authentication and role-based access control.</li>
+        <li>Integrated Razorpay with server-side payment verification before enrollment.</li>
+        <li>Stored lecture videos in private Amazon S3 storage and generated short-lived presigned URLs after verifying course access.</li>
+        <li>Deployed on AWS EC2 with Nginx, PM2 and HTTPS. Added automated backend tests for payment, access and account flows.</li>
+      </ul>
+      <h3 class="lab">AWS Cloud Infrastructure Lab</h3>
+      <ul><li>Configured a VPC with public and private subnets, route tables and security groups. Connected EC2 to Amazon RDS and monitored resources with CloudWatch.</li></ul>
+    </section>
+    <section class="education">
+      <h2>Education</h2>
+      <h3>Bachelor of Science in Computer Science | April 2026</h3>
+      <p>L.D. Sonawane College, University of Mumbai | CGPA 8.3/10</p>
+    </section>
+    <section>
+      <h2>Certifications and Training</h2>
+      <p>AWS Certified Cloud Practitioner (CLF-C02), 2026</p>
+      <p>GitHub Copilot (GH-300), 2026</p>
+      <p>Cisco Networking Academy: JavaScript Essentials 1 and 2, HTML Essentials, CSS Essentials</p>
+      <p>Let'sUpgrade / NSDC: JavaScript and HTML/CSS bootcamps</p>
+    </section>
+  </main>
+  <script>document.getElementById('print').addEventListener('click', () => window.print());</script>
+</body>
+</html>

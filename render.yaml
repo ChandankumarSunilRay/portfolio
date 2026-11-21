@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: chandankumar-portfolio
+    runtime: static
+    buildCommand: cd client && npm ci && npm run build
+    staticPublishPath: client/dist
